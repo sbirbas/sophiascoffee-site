@@ -184,8 +184,6 @@ section {
     text-transform: capitalize;
     text-align: center;
 }
-
-
 .about {
     padding-top: 50px;
     padding-bottom: 50px;
@@ -213,14 +211,16 @@ section {
 
 .about .row .content h3 {
     font-size: 3rem;
-    color: var()var(--main-color);
+    
+    color: var(--main-color);
 }
 
-.about .row .content {
+.about .row .content p {
     font-size: 1.6rem;
+    text-wrap: wrap;
     color: #444;
     padding: 1rem;
-}
+} 
 
 .line {
     margin-top: 35px;
