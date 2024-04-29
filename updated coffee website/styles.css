@@ -184,29 +184,27 @@ section {
     text-transform: capitalize;
     text-align: center;
 }
+
+
 .about {
     padding-top: 50px;
     padding-bottom: 50px;
-    background-image: url(../image/about-bg.png);
-    background-repeat: repeat;
-    background-position: center top;
 }
 
 .about .row {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction:row
 }
 
 .about .row .image {
-    float:left;
     width: 50%;
+    float: left;
     max-width: 50%;
 }
 
 .about .row .content {
     float:right;
     max-width: 50%;
-    padding: 1rem;
 }
 
 .about .row .content h3 {
@@ -217,10 +215,34 @@ section {
 
 .about .row .content p {
     font-size: 1.6rem;
-    text-wrap: wrap;
     color: #444;
+    flex-direction: column;
     padding: 1rem;
 } 
+
+@media (max-width: 1150px) {
+    .about .row {
+      flex-direction: column;
+    }
+
+    .about .row .content h3, p{
+        text-align: center;
+    }
+    .about .row .image img {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        height: auto;
+      }
+
+
+    .about .row .image,
+    .about .row .content {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+
 
 .line {
     margin-top: 35px;
